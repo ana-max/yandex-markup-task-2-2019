@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic');
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+}
+
+.link
+{
+    color: #1da7f4;
+}
+
+.link:hover
+{
+    color: #f41d1d;
+}
+/* Начало шапки страницы */
+
+.header
+{
+    position: fixed;
+    border-bottom: 2px solid #e6e6e6;
+    height: 102px;
+    box-sizing: border-box;
+    background: #fff;
+    z-index: 100;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    font-size: 36px;
+
+    padding: 29px 0 29px 38px;
+}
+
+/* Конец шапки страницы */
+
+/* Начало контента страницы */
+
+.content
+{
+    margin-top: 100px;
+    padding: 24px 38px 40px;
+    min-height: calc(100vh - 218px);
+}
+
+/* Стилизация кнопки - переключателя в другой вид карточек */
+
+.switching-page-view
+{
+    display: none;
+}
+
+.switching-page-view:checked + .switching-page-view__label
+{
+    transform: rotate(90deg);
+}
+
+.switching-page-view__label
+{
+    display: block;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: url('images/button.svg') no-repeat center;
+    cursor: pointer;
+    transition: transform .5s ease-out;
+}
+/* Конец стилизации кнопки - переключателя в другой вид карточек */
+
+/* Начало стилизации карточки с котёнком по умолчанию */
+
+.kitten-card:hover > .kitten-card__image
+{
+    /* При наведении на карточку, картинка должна стать полупрозрачной*/
+    opacity: .5;
+}
+
+.kitten-card
+{
+    border-radius: 10px;
+    float: left;
+    border: 4px solid #e6e6e6;
+    box-sizing: border-box;
+    margin: 20px 20px 28px 0;
+    width: 300px;
+    height: 400px;
+}
+
+.kitten-card__image
+{
+    /* Высота картинки должна быть не более 200px, иначе-обрезаем */
+    position: relative;
+    left: -4px;
+    top: -4px;
+    height: 200px;
+    overflow: hidden;
+    width: 300px;
+    box-sizing: border-box;
+    background: #e6e6e6;
+    border-radius: 10px 10px 0 0;
+    margin: auto;
+}
+
+.kitten-image
+{
+    max-width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.kitten-card__title
+{
+    margin: 19px 18px;
+    font-size: 18px;
+}
+
+.kitten-card__description
+{
+    position: relative;
+    line-height: 1.5em;
+    height: 9em;
+    overflow: hidden;
+    margin: 0 18px;
+}
+
+.kitten-card__description:after
+{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 1.5em;
+    background: linear-gradient(rgba(0,0,0,0), #fff);
+}
+
+.kitten-list::after
+{
+    content: '';
+    display: table;
+    clear: both;
+    margin-bottom: -28px;
+}
+/* Конец стилизации карточки с котёнком по умолчанию */
+
+/* Начало стилизации карточек при нажатии на кнопку */
+
+.switching-page-view:checked ~ .kitten-list .kitten-card
+{
+    float: none;
+    width: 600px;
+    height: 200px;
+}
+
+.switching-page-view:checked ~ .kitten-list .kitten-card__image
+{
+    float: left;
+    border-radius: 10px 0 0 10px;
+}
+
+.switching-page-view:checked ~ .kitten-list .kitten-card__title,
+.switching-page-view:checked ~ .kitten-list .kitten-card__description
+{
+    margin-left: 318px;
+}
+
+.switching-page-view:checked ~ .kitten-list .kitten-card__description
+{
+    height: 100px;
+}
+/* Конец стилизации карточек при нажатии на кнопку */
+
+/* Конец контента страницы */
+
+/* Начало футера страницы */
+
+.footer
+{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 98px;
+    border-top: 2px solid #e6e6e6;
+}
+
+.nav-list
+{
+    float: left;
+    margin: 31px auto 0 38px;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-list__item
+{
+    display: inline-block;
+    margin-right: 28px;
+}
+
+.footer__copyright
+{
+    float: right;
+    margin: 25px 30px 0 0;
+}
+
+/* Конец футера страницы */
+
+/* Начало стилей модального окна */
+
+.modal
+{
+    /* При обычном просмотре модального окна нет */
+    display: none;
+}
+
+.kitten
+{
+    padding: 21px 34px 21px 27px;
+}
+
+.modal:target
+{
+    /* При нажатии на картинку модальное окно появляется для каждого котёнка */
+    display: block;
+    position: fixed;
+    background: #fff;
+    z-index: 10000;
+    width: 828px;
+    height: 508px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    border: 2px solid #e6e6e6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+}
+
+.slider
+{
+    margin: auto;
+    float: left;
+    width: 500px;
+    height: 400px;
+    background: #e6e6e6;
+    position: relative;
+}
+
+.slider__image
+{
+    margin: auto;
+    position: absolute;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.kitten__title
+{
+    margin: 0 auto 13px 527px;
+    font-size: 18px;
+}
+
+.kitten__description
+{
+    line-height: 1.5;
+    margin: 0 30px 20px 527px;
+}
+
+/* Начало стилей для кнопок внизу изображения модального окна */
+
+.slider__input
+{
+    display: none;
+}
+
+.slider__input + img
+{
+    /* Если точка не нажата, то изображение не показывается */
+    display: none;
+}
+
+.slider__control
+{
+    margin-right: 10px;
+    background: #c4c4c4;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.slider__input:checked + img
+{
+    /* Если точка нажата, то изображение показывается */
+    display: block;
+    max-height: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide1:checked ~ .slider__controls .control1,
+.slide2:checked ~ .slider__controls .control2,
+.slide3:checked ~ .slider__controls .control3
+{
+    background: #1da7f4;
+}
+
+.slider__controls
+{
+    position: absolute;
+    width: 500px;
+    top: 431px;
+    text-align: center;
+}
+
+/* Конец стилей для кнопок внизу изображения модального окна */
+
+/* Стили для кнопки закрытия модального окна */
+
+.modal__close
+{
+    background: url('images/cross.svg') no-repeat center;
+    right: 10px;
+    position: absolute;
+    top: 9px;
+    height: 24px;
+    width: 24px;
+}

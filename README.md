@@ -1,5 +1,13 @@
 # Задача «Мурррмаркет Аркадия»
 
+Перед выполнением задания внимательно прочитайте:
+
+- [Кодекс чести студента курсов](https://github.com/urfu-2019/guides/blob/master/CODE_OF_CONDUCT.md)
+- [О всех этапах проверки задания](https://github.com/urfu-2019/guides/blob/master/workflow/overall.md)
+- [Как отправить пулл](https://github.com/urfu-2019/guides/blob/master/workflow/pull.md)
+- [Как пройти тесты](https://github.com/urfu-2019/guides/blob/master/workflow/test.md)
+- Правила оформления [javascript](https://github.com/urfu-2019/guides/blob/master/codestyle/js.md), [HTML](https://github.com/urfu-2019/guides/blob/master/codestyle/html.md) и [CSS](https://github.com/urfu-2019/guides/blob/master/codestyle/css.md) кода
+
 ## Основное задание
 
 > :warning: Задание необходимо решить без использования JavaScript  

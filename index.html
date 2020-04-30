@@ -2,8 +2,388 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Задача «Мурмаркет»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <!-- Начало шапки страницы -->
+    <header class="header">Мурррмаркет</header>
+    <!-- Конец шапки страницы -->
+    <!-- Начало контента страницы -->
+    <section class="content">
+        <!-- Кнопка для переключения в другой вид карточек и обратно -->
+        <input type="checkbox" id="switching-checkbox" class="switching-page-view">
+        <label for="switching-checkbox" class="switching-page-view__label"></label>
+
+        <article class="kitten-list">
+            <!-- Карточка с котёнком -->
+            <section class="kitten-card">
+                <figure class="kitten-card__image">
+                    <a href="#kitten-1">
+                        <img class="kitten-image"
+                             src="cats/kitten-1.png"
+                             alt="Маленький котёнок с голубыми глазами смотрит за камеру">
+                    </a>
+                    <figcaption></figcaption>
+                </figure>
+                <header class="kitten-card__title">Манчкин длинношерстный</header>
+                <p class="kitten-card__description">
+                    Манчкины — очень необычные кошки.
+                    При средней длине тела их лапки короче, чем у обычных кошек в 2-3 раза,
+                    из-за этой особенности их иногда называют таксами.
+                </p>
+            </section>
+
+            <!-- Карточка с котёнком -->
+            <section class="kitten-card">
+                <figure class="kitten-card__image">
+                    <a href="#kitten-2">
+                        <img class="kitten-image"
+                             src="cats/kitten-2.jpg"
+                             alt="Красивая австралийская дымчатая
+                     кошка с голубыми глазами смотрит мимо камеры">
+                    </a>
+                    <figcaption></figcaption>
+                </figure>
+                <header class="kitten-card__title">Австралийская дымчатая</header>
+                <p class="kitten-card__description">
+                        Австралийская дымчатая – очень жизнерадостная и ласковая порода.
+                        Ее представители общительны, спокойны и терпеливы.
+                        Они чрезвычайно сообразительны, уравновешены и беззаботны.
+                </p>
+            </section>
+
+            <!-- Карточка с котёнком -->
+            <section class="kitten-card">
+                <figure class="kitten-card__image">
+                    <a href="#kitten-3">
+                        <img class="kitten-image"
+                             src="cats/kitten-3.jpg"
+                             alt="Милый котёнок с загнутыми ушами смотрит мимо камеры">
+                    </a>
+                    <figcaption></figcaption>
+                </figure>
+                <header class="kitten-card__title">Американский керл</header>
+                <p class="kitten-card__description">
+                        Американские керлы – кошки очень верные и преданные,
+                        ориентированные на человека.
+                        Это дружелюбные и уравновешенные, очень сообразительные и игривые питомцы.
+                </p>
+            </section>
+
+            <!-- Карточка с котёнком -->
+            <section class="kitten-card">
+                <figure class="kitten-card__image">
+                    <a href="#kitten-4">
+                        <img class="kitten-image"
+                             src="cats/kitten-4.jpg"
+                             alt="Красивый американский бобтейл позирует на камеру.">
+                    </a>
+                    <figcaption></figcaption>
+                </figure>
+                <header class="kitten-card__title">Американский бобтейл</header>
+                <p class="kitten-card__description">
+                    Американские бобтейлы – кошки ласковые и невероятно умные.
+                    Они очень общительны и сильно привязываются к людям.
+                    Кроме того, по своему характеру они чрезвычайно игривы.
+                </p>
+            </section>
+
+            <!-- Карточка с котёнком -->
+            <section class="kitten-card">
+                <figure class="kitten-card__image">
+                    <a href="#kitten-5">
+                        <img class="kitten-image"
+                             src="cats/kitten-5.jpg"
+                             alt="Красивого ангорского котёнка сфотографировали за какой-то игрой">
+                    </a>
+                    <figcaption></figcaption>
+                </figure>
+                <header class="kitten-card__title">Ангорская (турецкая ангора)</header>
+                <p class="kitten-card__description">
+                    В описании породы и характера турецкой ангоры всегда отмечается,
+                    что эта кошка не только умна, но и чрезвычайно адаптивна.
+                    Кроме того, она очень игрива и ласкова.
+                </p>
+            </section>
+
+            <!-- Карточка с котёнком -->
+            <section class="kitten-card">
+                <figure class="kitten-card__image">
+                    <a href="#kitten-6">
+                        <img class="kitten-image"
+                             src="cats/kitten-6.jpg"
+                             alt="Красивая бенгальская кошка испуганно смотрит в камеру обернувшись">
+                    </a>
+                    <figcaption></figcaption>
+                </figure>
+                <header class="kitten-card__title">Бенгальская</header>
+                <p class="kitten-card__description">
+                    Бенгальские кошки по характеру – уверенные в себе, деловитые, любознательные,
+                    и верные компаньоны.
+                </p>
+            </section>
+        </article>
+    </section>
+
+    <!-- Конец контента страницы -->
+
+    <!-- Начало якорей для модальных окон -->
+    <div id="kitten-1" class="modal">
+        <a href="#close" title="Закрыть" class="modal__close"></a>
+        <section class="kitten">
+            <section class="kitten__image slider">
+
+                <input type="radio" id="k1s1" name="k1" class="slider__input slide1" checked>
+                <img src="cats/kitten-1.png" class="slider__image"
+                     alt="Маленький котёнок с голубыми глазами смотрит за камеру">
+
+                <input type="radio" id="k1s2" name="k1" class="slider__input slide2">
+                <img src="cats/kitten-1-reverse.png" class="slider__image"
+                     alt="Маленький котёнок с голубыми глазами смотрит за камеру. Перевернутое фото.">
+
+                <input type="radio" id="k1s3" name="k1" class="slider__input slide3">
+                <img src="cats/kitten-1-chb.png" class="slider__image"
+                     alt="Маленький котёнок с голубыми глазами смотрит за камеру. Черно-белое фото.">
+
+                <div class="slider__controls">
+                    <label for="k1s1" class="slider__control control1"></label>
+                    <label for="k1s2" class="slider__control control2"></label>
+                    <label for="k1s3" class="slider__control control3"></label>
+                </div>
+
+            </section>
+            <header class="kitten__title">Манчкин длинношерстный</header>
+            <p class="kitten__description">
+                Манчкины — очень необычные кошки.
+                При средней длине тела их лапки короче, чем у обычных кошек в 2-3 раза,
+                из-за этой особенности их иногда называют таксами.
+            </p>
+        </section>
+    </div>
+
+    <div id="kitten-2" class="modal">
+        <a href="#close" title="Закрыть" class="modal__close"></a>
+        <section class="kitten">
+            <section class="kitten__image slider">
+
+                <input type="radio" id="k2s1" name="k2" class="slider__input slide1" checked>
+                <img src="cats/kitten-2.jpg" class="slider__image"
+                     alt="Красивая австралийская дымчатая кошка
+                  с голубыми глазами смотрит мимо камеры.">
+
+                <input type="radio" id="k2s2" name="k2" class="slider__input slide2">
+                <img src="cats/kitten-2-reverse.jpg" class="slider__image"
+                     alt="Красивая австралийская дымчатая кошка
+                  с голубыми глазами смотрит мимо камеры.
+                  Перевернутое фото">
+
+                <input type="radio" id="k2s3" name="k2" class="slider__input slide3">
+                <img src="cats/kitten-2-chb.jpg" class="slider__image"
+                     alt="Красивая австралийская дымчатая кошка
+                  с голубыми глазами смотрит мимо камеры.
+                  Черно-белое фото">
+
+                <div class="slider__controls">
+                    <label for="k2s1" class="slider__control control1"></label>
+                    <label for="k2s2" class="slider__control control2"></label>
+                    <label for="k2s3" class="slider__control control3"></label>
+                </div>
+
+            </section>
+            <header class="kitten__title">Австралийская дымчатая</header>
+            <p class="kitten__description">
+                Австралийская дымчатая – очень жизнерадостная и ласковая порода.
+                Ее представители общительны, спокойны и терпеливы.
+                Они чрезвычайно сообразительны, уравновешены и беззаботны.
+            </p>
+            <p class="kitten__description">
+                Именно эти черты характера позволяют австралийским
+                дымчатым кошкам хорошо уживаться с детьми,
+                собаками и другими домашними животными.
+                Они чрезвычайно сообразительны, уравновешены и беззаботны.
+            </p>
+        </section>
+    </div>
+
+    <div id="kitten-3" class="modal">
+        <a href="#close" title="Закрыть" class="modal__close"></a>
+        <section class="kitten">
+            <section class="kitten__image slider">
+
+                <input type="radio" id="k3s1" name="k3" class="slider__input slide1" checked>
+                <img src="cats/kitten-3.jpg" class="slider__image"
+                     alt="Милый котёнок с загнутыми ушами смотрит мимо камеры.">
+
+                <input type="radio" id="k3s2" name="k3" class="slider__input slide2">
+                <img src="cats/kitten-3-reverse.jpg" class="slider__image"
+                     alt="Милый котёнок с загнутыми ушами смотрит мимо камеры.Перевернутое фото">
+
+                <input type="radio" id="k3s3" name="k3" class="slider__input slide3">
+                <img src="cats/kitten-3-chb.jpg" class="slider__image"
+                     alt="Милый котёнок с загнутыми ушами смотрит мимо камеры.Черно-белое фото">
+
+                <div class="slider__controls">
+                    <label for="k3s1" class="slider__control control1"></label>
+                    <label for="k3s2" class="slider__control control2"></label>
+                    <label for="k3s3" class="slider__control control3"></label>
+                </div>
+
+            </section>
+            <header class="kitten__title">Американский керл</header>
+            <p class="kitten__description">
+                Американские керлы – кошки очень верные и преданные,
+                ориентированные на человека.
+                Это дружелюбные и уравновешенные, очень сообразительные и игривые питомцы.
+            </p>
+            <p class="kitten__description">
+                Они на удивление быстро приспосабливаются к другим домашним животным,
+                детям и новым обстоятельствам.
+                Голос у них негромкий, и в целом они довольно молчаливы,
+                но умеют сообщать о своих желаниях тихим мурлыканьем или «воркованием».
+            </p>
+        </section>
+    </div>
+
+    <div id="kitten-4" class="modal">
+        <a href="#close" title="Закрыть" class="modal__close"></a>
+        <section class="kitten">
+            <section class="kitten__image slider">
+
+                <input type="radio" id="k4s1" name="k4" class="slider__input slide1" checked>
+                <img src="cats/kitten-4.jpg" class="slider__image"
+                     alt="Красивый американский бобтейл позирует на камеру.">
+
+                <input type="radio" id="k4s2" name="k4" class="slider__input slide2">
+                <img src="cats/kitten-4-reverse.jpg" class="slider__image"
+                     alt="Красивый американский бобтейл позирует на камеру.Перевернутое фото">
+
+                <input type="radio" id="k4s3" name="k4" class="slider__input slide3">
+                <img src="cats/kitten-4-reverse-chb.jpg" class="slider__image"
+                     alt="Красивый американский бобтейл позирует на камеру.Черно-белое фото">
+
+                <div class="slider__controls">
+                    <label for="k4s1" class="slider__control control1"></label>
+                    <label for="k4s2" class="slider__control control2"></label>
+                    <label for="k4s3" class="slider__control control3"></label>
+                </div>
+
+            </section>
+            <header class="kitten__title">Американский бобтейл</header>
+            <p class="kitten__description">
+                Американские бобтейлы – кошки ласковые и невероятно умные.
+                Они очень общительны и сильно привязываются к людям.
+                Кроме того, по своему характеру они чрезвычайно игривы:
+                могут часами играть в прятки или выслеживать «добычу».
+            </p>
+            <p class="kitten__description">
+                Нередко американский бобтейл затевает игру с человеком по собственной
+                инициативе или демонстрирует свои охотничьи инстинкты, ловко
+                хватая залетевших в комнату насекомых. В целом, кошки породы
+                американский бобтейл ведут себя довольно тихо.
+            </p>
+        </section>
+    </div>
+
+    <div id="kitten-5" class="modal">
+        <a href="#close" title="Закрыть" class="modal__close"></a>
+        <section class="kitten">
+            <section class="kitten__image slider">
+
+                <input type="radio" id="k5s1" name="k5" class="slider__input slide1" checked>
+                <img src="cats/kitten-5.jpg" class="slider__image"
+                     alt="Красивого ангорского котёнка сфотографировали за какой-то игрой.">
+
+                <input type="radio" id="k5s2" name="k5" class="slider__input slide2">
+                <img src="cats/kitten-5-reverse.jpg" class="slider__image"
+                     alt="Красивого ангорского котёнка сфотографировали за какой-то игрой.
+                     Перевернутое фото">
+
+                <input type="radio" id="k5s3" name="k5" class="slider__input slide3">
+                <img src="cats/kitten-5-chd.jpg" class="slider__image"
+                     alt="Красивого ангорского котёнка сфотографировали за какой-то игрой.
+                     Черно-белое фото">
+
+                <div class="slider__controls">
+                    <label for="k5s1" class="slider__control control1"></label>
+                    <label for="k5s2" class="slider__control control2"></label>
+                    <label for="k5s3" class="slider__control control3"></label>
+                </div>
+
+            </section>
+            <header class="kitten__title">Ангорская (турецкая ангора)</header>
+            <p class="kitten__description">
+                В описании породы и характера турецкой ангоры всегда отмечается,
+                что эта кошка не только умна, но и чрезвычайно адаптивна.
+                Кроме того, она очень игрива и ласкова.
+                Она подойдет для семьи с маленькими детьми
+                и для пожилых владельцев
+            </p>
+            <p class="kitten__description">
+                Обычно эти питомцы выбирают своим фаворитом кого-то одного из членов семьи.
+                Это уверенная в себе кошка с сильным характером.
+            </p>
+        </section>
+    </div>
+
+    <div id="kitten-6" class="modal">
+        <a href="#close" title="Закрыть" class="modal__close"></a>
+        <section class="kitten">
+            <section class="kitten__image slider">
+
+                <input type="radio" id="k6s1" name="k6" class="slider__input slide1" checked>
+                <img src="cats/kitten-6.jpg" class="slider__image"
+                     alt="Красивая бенгальская кошка испуганно смотрит в камеру обернувшись">
+
+                <input type="radio" id="k6s2" name="k6" class="slider__input slide2">
+                <img src="cats/kitten-6-reverse.jpg" class="slider__image"
+                     alt="Красивая бенгальская кошка испуганно смотрит в камеру обернувшись.
+                     Перевернутое фото">
+
+                <input type="radio" id="k6s3" name="k6" class="slider__input slide3">
+                <img src="cats/kitten-6-chd.jpg" class="slider__image"
+                     alt="Красивая бенгальская кошка испуганно смотрит в камеру обернувшись.
+                     Черно-белое фото">
+
+                <div class="slider__controls">
+                    <label for="k6s1" class="slider__control control1"></label>
+                    <label for="k6s2" class="slider__control control2"></label>
+                    <label for="k6s3" class="slider__control control3"></label>
+                </div>
+
+            </section>
+            <header class="kitten__title">Бенгальская</header>
+            <p class="kitten__description">
+                Бенгальские кошки по характеру – уверенные в себе, деловитые, любознательные,
+                и верные компаньоны. Они хорошо уживаются с другими домашними животными и с
+                удовольствием участвуют в семейной жизни.
+            </p>
+            <p class="kitten__description">
+                Бенгалы очень ласковые кошки, но «сидеть на ручках» они будут только тогда,
+                когда сами этого захотят. Большую часть времени бенгальская кошка предпочитает играть,
+                бегать, лазать и исследовать территорию.
+            </p>
+        </section>
+    </div>
+    <!-- Конец якорей для модальных окон -->
+    <!-- Начало футера страницы -->
+    <footer class="footer">
+        <nav class="footer__nav">
+            <ul class="nav-list">
+                <li class="nav-list__item">
+                    <a class="link" href="">О компании</a>
+                </li>
+                <li class="nav-list__item">
+                    <a class="link" href="">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="footer__copyright">
+                ООО &laquo;Добрые котятя&raquo;<br>
+                2019
+        </aside>
+    </footer>
+    <!-- Конец футера страницы -->
 </body>
 </html>
